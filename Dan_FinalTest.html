@@ -1,0 +1,148 @@
+<!--
+Name: Dan Duc Vu
+Date: 2021/12/13
+Purpose: Final Exam-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Final Test Part B</title>
+  </head>
+  <style>
+    h1 {
+      text-align: left;
+    }
+    body {
+      font-family: Verdana;
+      font-size: 100%;
+      background-color: #d8e7ff;
+    }
+    input[type="number"] {
+      width: 40px;
+    }
+    .selection {
+      font-family: Verdana;
+      font-size: 11pt;
+      border: 1px solid #07a2fe;
+      color: black;
+      background-color: aliceblue;
+      height: 25px;
+      text-align: left;
+    }
+    .button {
+      font-family: Verdana;
+      background-color: aliceblue;
+      font-size: 12pt;
+      padding: 5px;
+    }
+    fieldset {
+      padding: 20px;
+    }
+    legend {
+      border: 1px solid black;
+      color: black;
+      font-size: 90%;
+      text-align: left;
+    }
+    .outputStyle {
+      color: #523620;
+      text-align: center;
+      margin: 20px 10px;
+      width: 550px;
+      height: auto;
+    }
+  </style>
+  <body>
+    <h1>Customer Data</h1>
+
+    <!-- Registration Form -->
+    <div>
+      <fieldset>
+        <legend>New Customer Form</legend>
+        First name:
+        <input type="text" id="tbFirstName" />
+        <br /><br />
+        Last name:
+        <input type="text" id="tbLastName" />
+        <br /><br />
+        City:
+        <input type="text" id="tbCity" />
+        Province:
+        <select id="ddProvince" class="selection">
+          <option>ON</option>
+          <option>BC</option>
+          <option>AB</option>
+          <option>SK</option>
+          <option>MB</option>
+          <option>QC</option>
+          <option>NB</option>
+          <option>NS</option>
+          <option>PE</option>
+          <option>NL</option>
+          <option>YT</option>
+          <option>NT</option>
+          <option>NU</option>
+        </select>
+        <br /><br />
+        Age:
+        <input type="number" id="tbAge" />
+        Gender:
+        <select id="ddGender" class="selection">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+        <br /><br />
+        <input type="button" id="btnSubmit" value="Submit" class="button" />
+      </fieldset>
+    </div>
+    <br /><br />
+
+    <!-- Customer List -->
+    <div>
+      <fieldset>
+        <legend>Customers</legend>
+        <div id="divCustomerOutput" class="outputStyle">
+          [Customer List Here]
+        </div>
+      </fieldset>
+    </div>
+    <br /><br />
+
+    <!-- Query Form -->
+    <div>
+      <fieldset>
+        <legend>Query</legend>
+        Gender:
+        <select id="ddQueryGender" class="selection">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </select>
+        Province:
+        <select id="ddQueryProvince" class="selection">
+          <option value="ON">ON</option>
+          <option value="BC">BC</option>
+          <option value="AB">AB</option>
+          <option value="SK">SK</option>
+          <option value="MB">MB</option>
+          <option value="QC">QC</option>
+          <option value="NB">NB</option>
+          <option value="NS">NS</option>
+          <option value="PE">PE</option>
+          <option value="NL">NL</option>
+          <option value="YT">YT</option>
+          <option value="NT">NT</option>
+          <option value="NU">NU</option>
+        </select>
+        Age:
+        <input type="number" id="tbQueryAge" value="18" />
+        &nbsp;
+        <input type="button" id="btnQuery" value="Query" class="button" />
+        <hr />
+        <div id="divQueryOutput" class="outputStyle">[Query Output Here]</div>
+      </fieldset>
+    </div>
+
+    <!-- Javascript -->
+    <script src="main.js"></script>
+  </body>
+</html>
